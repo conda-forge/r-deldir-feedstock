@@ -14,14 +14,16 @@ Summary: Calculates the Delaunay triangulation and the Dirichlet or Voronoi tess
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-deldir-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-deldir-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-deldir-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-deldir-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-deldir-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-deldir-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-deldir-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-deldir-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-deldir-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-deldir-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-deldir-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-deldir-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-deldir/badges/version.svg)](https://anaconda.org/conda-forge/r-deldir)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-deldir/badges/downloads.svg)](https://anaconda.org/conda-forge/r-deldir)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--deldir-green.svg)](https://anaconda.org/conda-forge/r-deldir) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-deldir.svg)](https://anaconda.org/conda-forge/r-deldir) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-deldir.svg)](https://anaconda.org/conda-forge/r-deldir) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-deldir.svg)](https://anaconda.org/conda-forge/r-deldir) |
 
 Installing r-deldir
 ===================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
