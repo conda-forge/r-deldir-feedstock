@@ -1,5 +1,4 @@
-{% set version = '0.1-14' %}
-
+{% set version = '0.1-15' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,35 +9,37 @@ package:
 source:
   fn: deldir_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/deldir_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/deldir/deldir_{{ version }}.tar.gz
-  sha256: 89d365a980ef8589971e5d311c6bd59fe32c48dbac8000a880b9655032c99289
+    - {{ cran_mirror }}/src/contrib/deldir_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/deldir/deldir_{{ version }}.tar.gz
+  sha256: 571011c208829f47ecd9f92a19fd94a8eb59de5a2645ab8c62e73926ade30710
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('fortran') }}        # [unix]
-    - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('fortran') }}  # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
-
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
 
 test:
   commands:
-    - $R -e "library('deldir')"  # [not win]
+    - $R -e "library('deldir')"           # [not win]
     - "\"%R%\" -e \"library('deldir')\""  # [win]
 
 about:
@@ -49,9 +50,14 @@ about:
     in various ways.  Clips tessellations to sub-windows. Calculates perimeters of tessellations.  Summarises
     information about the tiles of the tessellation.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
     - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
