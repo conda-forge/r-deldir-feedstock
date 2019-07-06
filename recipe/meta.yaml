@@ -1,4 +1,4 @@
-{% set version = '0.1-21' %}
+{% set version = '0.1-22' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/deldir_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/deldir/deldir_{{ version }}.tar.gz
-  sha256: b9dabcc1813c7a0f8edaf720a94bdd611a83baf3d3e52e861d352369e815690c
+  sha256: f07204d7095c2c56288a7de91990b88424c3d1a0d6464296ffd93dbea8655919
 
 build:
   merge_build_host: True  # [win]
@@ -56,8 +56,8 @@ extra:
     - conda-forge/r
 
 # Package: deldir
-# Version: 0.1-21
-# Date: 2019-06-15
+# Version: 0.1-22
+# Date: 2019-07-05
 # Title: Delaunay Triangulation and Dirichlet (Voronoi) Tessellation
 # Author: Rolf Turner
 # Maintainer: Rolf Turner <r.turner@auckland.ac.nz>
@@ -69,6 +69,6 @@ extra:
 # ByteCompile: true
 # License: GPL (>= 2)
 # NeedsCompilation: yes
-# Packaged: 2019-06-14 22:27:24 UTC; rolf
+# Packaged: 2019-07-05 03:05:47 UTC; rolf
 # Repository: CRAN
-# Date/Publication: 2019-06-15 04:20:04 UTC
+# Date/Publication: 2019-07-05 04:30:14 UTC
