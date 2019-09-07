@@ -1,4 +1,4 @@
-{% set version = '0.1-22' %}
+{% set version = '0.1-23' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/deldir_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/deldir/deldir_{{ version }}.tar.gz
-  sha256: f07204d7095c2c56288a7de91990b88424c3d1a0d6464296ffd93dbea8655919
+  sha256: e0112bce9fc94daf73596a0fff9b3958b80872e3bbb487be73e157b13a6f201d
 
 build:
   merge_build_host: True  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,21 +43,22 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=deldir
-  license: GPL (>= 2)
+  license: GPL-2
   summary: Calculates the Delaunay triangulation and the Dirichlet or Voronoi tessellation (with
     respect to the entire plane) of a planar point set. Plots triangulations and tessellations
     in various ways.  Clips tessellations to sub-windows. Calculates perimeters of tessellations.  Summarises
     information about the tiles of the tessellation.
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
 
 # Package: deldir
-# Version: 0.1-22
-# Date: 2019-07-05
+# Version: 0.1-23
+# Date: 2019-07-31
 # Title: Delaunay Triangulation and Dirichlet (Voronoi) Tessellation
 # Author: Rolf Turner
 # Maintainer: Rolf Turner <r.turner@auckland.ac.nz>
@@ -69,6 +70,6 @@ extra:
 # ByteCompile: true
 # License: GPL (>= 2)
 # NeedsCompilation: yes
-# Packaged: 2019-07-05 03:05:47 UTC; rolf
+# Packaged: 2019-07-31 02:06:08 UTC; rolf
 # Repository: CRAN
-# Date/Publication: 2019-07-05 04:30:14 UTC
+# Date/Publication: 2019-07-31 05:00:09 UTC
