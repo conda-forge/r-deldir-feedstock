@@ -3,7 +3,7 @@ About r-deldir
 
 Home: https://CRAN.R-project.org/package=deldir
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD-3-Clause
 
