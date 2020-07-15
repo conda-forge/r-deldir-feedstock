@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=deldir
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Calculates the Delaunay triangulation and the Dirichlet or Voronoi tessellation (with respect to the entire plane) of a planar point set. Plots triangulations and tessellations in various ways.  Clips tessellations to sub-windows. Calculates perimeters of tessellations.  Summarises information about the tiles
     of the tessellation.
   license_family: GPL2
