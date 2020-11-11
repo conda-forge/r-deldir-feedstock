@@ -1,4 +1,4 @@
-{% set version = "0.1-29" %}
+{% set version = "0.2-3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/deldir_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/deldir/deldir_{{ version }}.tar.gz
-  sha256: 7b1ab8e505af2e716d213996ae149a281674cbff6f265c80a6feeafe114390ef
+  sha256: 2d24800f5ec6ad9dc57b9b265365b29c07717f4562d8f3e6344336d3340c364e
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
