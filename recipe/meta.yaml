@@ -1,4 +1,4 @@
-{% set version = "1.0-5" %}
+{% set version = "1.0-6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/deldir_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/deldir/deldir_{{ version }}.tar.gz
-  sha256: a0f92dad53814744cdb8386ad2e68831d9e0287c5bc65adf0f84a77e21bc1458
+  sha256: 6df6d8325c607e0b7d63cbc53c29e774eff95ad4acf9c7ec8f70693b0505f8c5
 
 build:
   merge_build_host: true  # [win]
